@@ -1,0 +1,79 @@
+/*---WEB PAGE DEFAULT CSS---------------------------------------------------------------------------------------------*/
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Chakra Petch', sans-serif;
+    }
+
+/*---ROOT CSS---------------------------------------------------------------------------------------------------------*/
+
+    :root {
+        --primary-color: #000000;
+        --font-color: #ffffff;
+        --dev-color: #f21515;
+    }
+
+/*---BODY CSS---------------------------------------------------------------------------------------------------------*/
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: var(--primary-color);
+    }
+
+/*---H3 CSS-----------------------------------------------------------------------------------------------------------*/
+
+    h3 {
+        color: var(--font-color);
+        margin: 0;
+        font-size: 4.5rem;
+        text-transform: uppercase;
+        z-index: 1;
+        font-weight: 900;
+        position: relative;
+        overflow: hidden;
+    }
+
+    h3:before {
+        content: '';
+        position: absolute;
+        left: 110%;
+        width: 120%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent 0%, #000 5%, #000 100%);
+        animation: animate 5.5s linear forwards;
+    }
+
+    h3 span {
+        color: var(--dev-color)
+    }
+
+/*---KEYFRAMES CSS----------------------------------------------------------------------------------------------------*/
+
+    @keyframes animate {
+        0% {
+            left: 110%;
+        }
+
+        100% {
+            left: -20%;
+        }
+    }
+
+/*---VIDEO CSS----------------------------------------------------------------------------------------------------*/
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: 2;
+        pointer-events: none;
+        mix-blend-mode: screen;
+    }
